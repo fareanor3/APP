@@ -22,9 +22,9 @@ joueur1=[]
 joueur2=[]
 
 ###distribution###
-for i in range(0,52,2):
+for i in range(0,len(jeu),2):
     joueur1.append(jeu[i])
-for i in range(1,52,2):
+for i in range(1,len(jeu),2):
     joueur2.append(jeu[i])
 
 ###jeu###
@@ -42,7 +42,6 @@ while len(joueur1)>0 and len(joueur2)>0:
 
         joueur1.extend(cj1)   # ajoute l'elment de la liste à la fin
         joueur1.extend(cj2)
-        print()
         cj1 = []
         cj2 = []
         
