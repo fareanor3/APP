@@ -64,7 +64,7 @@ while n<26:
 
 if len(joueur1) > len(joueur2) : 
     print("Le joueur 1 a gagné") 
-    print("score :" compte1)
+    print("score :", compte1)
     print("à ",compte2)
 
 elif len(joueur1) < len(joueur2) :
