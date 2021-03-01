@@ -89,3 +89,8 @@ elif len(joueur1) < len(joueur2) :
     print("le joueur 2 a gagné")
     print(compte2)
     print("à : ",compte1)
+    
+else :
+    print("Egalité")
+    print("Le joueur 1 a :", joueur1)
+    print("Le joueur 2 a :", joueur2)
