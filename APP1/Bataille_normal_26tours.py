@@ -33,6 +33,8 @@ random.shuffle(joueur2)
 cj1 = []
 cj2 = []
 n=0
+compte1=0
+compte2=0
 
 while n<26:
 
@@ -47,6 +49,7 @@ while n<26:
         joueur1.extend(cj2)
         cj1 = []
         cj2 = []
+        compte1 += 1
         
     elif cj1[-1][1]<cj2[-1][1]: # joueur 2 gagne
 
@@ -54,16 +57,21 @@ while n<26:
         joueur2.extend(cj2)
         cj1 = []
         cj2 = []
+        compte2 += 1
     
     else :
         cj1.append(joueur1.pop(0))
         cj2.append(joueur2.pop(0))
 
 if len(joueur1) > len(joueur2) : 
-    print("Le joueur 1 a gagné")    
+    print("Le joueur 1 a gagné") 
+    print(compte1)
+    print("à : ",compte2)
 
 elif len(joueur1) < len(joueur2) :
     print("Le joueur 2 a gagné")
+    print(compte2)
+    print("à : ",compte1)
 
 else :
     print("Egalité")
