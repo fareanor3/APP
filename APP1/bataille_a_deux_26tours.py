@@ -70,8 +70,6 @@ while n<26:
         cj2 = []
         compte2 +=1
         
-    print("joueur 1 ", len(joueur1))
-    print("joueur 2 ", len(joueur2))
 
 if len(joueur1) > len(joueur2) : 
     print("le joueur 1 a gagné")
