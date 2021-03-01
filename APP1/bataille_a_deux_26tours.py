@@ -21,8 +21,6 @@ for i in range(0,len(jeu),2):
 for i in range(1,len(jeu),2):
     joueur2.append(jeu[i])
 
-print(len(joueur1))
-print(len(joueur2))
 ###jeu###
 random.shuffle(joueur1)
 random.shuffle(joueur2)
