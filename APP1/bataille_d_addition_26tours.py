@@ -35,8 +35,7 @@ compte2=0
 while n<26:
     
     n+=1
-    print(n)
-    
+        
     cj1.append(joueur1.pop(0))
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
