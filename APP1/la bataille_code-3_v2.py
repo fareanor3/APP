@@ -47,8 +47,8 @@ while len(joueur1)>0 and len(joueur2)>0:
         
     elif score_a1<score_a2: # joueur 2 gagne
 
-        joueur2.extend(cj1)   # ajoute l'elment de la liste
-        joueur2.extend(cj2)
+        joueur2.extend(cj2)   # ajoute l'elment de la liste
+        joueur2.extend(cj1)
         cj1 = []
         cj2 = []
     print("joueur 1 ", len(joueur1))
