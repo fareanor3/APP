@@ -53,10 +53,10 @@ while len(joueur1)>0 and len(joueur2)>0:
         cj2 = []
 
 if len(joueur1) > len(joueur2) : 
-    print("le joueur 1 a Gagner")    
+    print("Le joueur 1 a gagné")    
 
 elif len(joueur1) < len(joueur2) :
-    print("le joueur 2 a Gagner")
+    print("Le joueur 2 a gagné")
 
 else :
     print("Egalité")
