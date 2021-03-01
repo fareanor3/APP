@@ -40,9 +40,8 @@ while n<26:
 
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
-    print(joueur1)
-    print(joueur2)
     n+=1
+    
     if cj1[-1][1]>cj2[-1][1]: #joueur 1 gagne
 
         joueur1.extend(cj1)   # ajoute l'elment de la liste à la fin
