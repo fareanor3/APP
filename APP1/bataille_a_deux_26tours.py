@@ -69,8 +69,8 @@ while n<26:
         
     elif score_a1<score_a2: # joueur 2 gagne
 
-        joueur2.extend(cj1)   # ajoute l'elment de la liste
-        joueur2.extend(cj2)
+        joueur2.extend(cj2)   # ajoute l'elment de la liste
+        joueur2.extend(cj1)
         cj1 = []
         cj2 = []
         
