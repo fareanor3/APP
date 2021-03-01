@@ -65,9 +65,7 @@ while len(joueur1)>0 and len(joueur2)>0:
         cj1 = []
         cj2 = []
         compte2 += 1
-        
-    print("joueur 1 ", len(joueur1))
-    print("joueur 2 ", len(joueur2))
+
 
 if len(joueur1) > len(joueur2) : 
     print("Le joueur 1 a gagné")  
