@@ -44,7 +44,7 @@ def clic_8():
     import bataille_decouverte_26tours
     
 
-fen1=Tk(className='Python - BATTAILLE DES MEILLEURS')
+fen1=Tk(className='Python - BATTAILLE DU GROUPE DES MEILLEURS -')
 Can=Canvas(fen1,width=225, height=500, bg='white')
 fen1['background']='#283747'
 Bataille = Label(fen1, text="BATAILLE", fg = '#212F3C', font=font.Font(family="BOLD'",size=70),relief="raised")
