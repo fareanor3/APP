@@ -60,9 +60,9 @@ while n<26:
     print("joueur 2 ", len(joueur2))
 
 if len(joueur1) > len(joueur2) : 
-    print("le joueur 1 a gagné")
+    print("Le joueur 1 a gagné")
     print(len(joueur1))
 
 elif len(joueur1) < len(joueur2) :
-    print("le joueur 2 a gagné")
+    print("Le joueur 2 a gagné")
     print(len(joueur2))
