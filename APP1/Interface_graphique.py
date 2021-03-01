@@ -61,6 +61,11 @@ mode_5 = Button(fen1, text="bataille_a_deux_26tours",command=clic_5)
 mode_5.place(x=0,y=525, width=200, height=75)
 mode_6 = Button(fen1, text="bataille_a_deux",command=clic_6)
 mode_6.place(x=0,y=375, width=200, height=75)
+mode_7 = Button(fen1, text="la_bataille_découverte",command=clic_7)
+mode_7.place(x=200,y=150, width=200, height=75)
+mode_8 = Button(fen1, text="bataille_decouverte_26tours",command=clic_8)
+mode_8.place(x=200,y=300, width=200, height=75)
+
 Quit = Button(fen1, text="Quitter",command=fen1.quit)
 Quit.place(x=0,y=600,width=200, height=50)
 
