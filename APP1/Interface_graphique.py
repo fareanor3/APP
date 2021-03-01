@@ -47,7 +47,7 @@ def clic_8():
 fen1=Tk(className='Python - BATTAILLE DES MEILLEURS')
 Can=Canvas(fen1,width=225, height=500, bg='white')
 fen1['background']='#283747'
-Bataille = Label(fen1, text="BATAILLE", fg = '#212F3C', font=font.Font(family="Helvetica'",size=70),relief="raised")
+Bataille = Label(fen1, text="BATAILLE", fg = '#212F3C', font=font.Font(family="BOLD'",size=70),relief="raised")
 Bataille.place(x=10,y=30, width=430, height=80)
 mode_1 = Button(fen1, text="normale",relief="groove",command=clic_1)
 mode_1.place(x=0,y=150, width=225, height=75)
@@ -66,7 +66,7 @@ mode_7.place(x=0,y=300, width=225, height=75)
 mode_8 = Button(fen1, text="bataille_decouverte_26tours",relief="groove",command=clic_8)
 mode_8.place(x=225,y=300, width=225, height=75)
 
-Quit = Button(fen1, text="Quitter",command=fen1.quit)
+Quit = Button(fen1, text="Quitter",relief="sunken",command=fen1.quit)
 Quit.place(x=112.5,y=450,width=225, height=50)
 
 fen1.geometry("450x500")
