@@ -21,8 +21,6 @@ for i in range(0,len(jeu),2):
 for i in range(1,len(jeu),2):
     joueur2.append(jeu[i])
 
-print(len(joueur1))
-print(len(joueur2))
 ###jeu###
 random.shuffle(joueur1)
 random.shuffle(joueur2)
@@ -56,8 +54,7 @@ while len(joueur1)>0 and len(joueur2)>0:
         cj2 = []
         compte2 += 1
         
-    print("joueur 1 ", len(joueur1))
-    print("joueur 2 ", len(joueur2))
+
 
 if len(joueur1) > len(joueur2) : 
     print("Le joueur 1 a gagné")
