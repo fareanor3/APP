@@ -6,43 +6,43 @@ import os
 
 def clic_1():
     fen1.destroy()
-    import Bataille_normal.py
+    import Bataille_normal
     Bataille_normal.initialiser()
 
 def clic_2():
     fen1.destroy()
-    import Bataille_normal_26tours.py
+    import Bataille_normal_26tours
     Bataille_normal_26tours.initialiser()
 
 
 def clic_3():
     fen1.destroy()
-    import bataille_d_addition_26tours.py
+    import bataille_d_addition_26tours
     la_bataille_d_addition_26tours.initialiser()
 
 def clic_4():
     fen1.destroy()
-    import la_bataille_d_addition.py 
+    import la_bataille_d_addition
     la_bataille_d_addition.initialiser()
 
 def clic_5():
     fen1.destroy()
-    import bataille_a_deux_26tours.py
+    import bataille_a_deux_26tours
     bataille_a_deux_26tours.initialiser()
 
 def clic_6():
     fen1.destroy()
-    import bataille_a_deux.py 
+    import bataille_a_deux
     bataille_a_deux.initialiser()
 
 def clic_7():
     fen1.destroy()
-    import la_bataille_découverte.py 
+    import la_bataille_découverte 
     la_bataille_découverte.initialiser()
 
 def clic_8():
     fen1.destroy()
-    import bataille_decouverte_26tours.py 
+    import bataille_decouverte_26tours
     bataille_decouverte_26tours.initialiser()
 
 fen1=Tk()
