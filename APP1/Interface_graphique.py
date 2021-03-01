@@ -50,7 +50,7 @@ Bataille = Label(fen1, text="BATAILLE", font=font.Font(family="Consolas",size=75
 Bataille.place(x=0,y=0, width=450, height=150)
 mode_1 = Button(fen1, text="normale",command=clic_1)
 mode_1.place(x=0,y=150, width=200, height=75)
-mode_2 = Button(fen1, text="A deux",command=clic_2)
+mode_2 = Button(fen1, text="Bataille_normal_26tours",command=clic_2)
 mode_2.place(x=0,y=300, width=200, height=75)
 mode_3 = Button(fen1, text="la_bataille_d_addition_26tours",command=clic_3)
 mode_3.place(x=0,y=450, width=200, height=75)
