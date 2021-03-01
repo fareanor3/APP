@@ -81,5 +81,5 @@ elif len(joueur1) < len(joueur2) :
     
 else :
     print("Egalité")
-    print("Le joueur 1 a :", joueur1)
-    print("Le joueur 2 a :", joueur2)
+    print("Le joueur 1 a :", compte1)
+    print("Le joueur 2 a :", compte2)
