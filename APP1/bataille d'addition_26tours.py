@@ -66,3 +66,8 @@ if len(joueur1) > len(joueur2) :
 elif len(joueur1) < len(joueur2) :
     print("Le joueur 2 a gagné")
     print(len(joueur2))
+    
+else :
+    print("Egalité")
+    print("Le joueur 2 a :", joueur1)
+    print("Le joueur 2 a :", joueur2)
