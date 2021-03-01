@@ -54,8 +54,8 @@ while n<26:
 
     elif cj1[-1][1]<cj2[-1][1]: # joueur 2 gagne
 
-        joueur2.extend(cj1)   # ajoute l'elment de la liste à la fin
-        joueur2.extend(cj2)
+        joueur2.extend(cj2)   # ajoute l'elment de la liste à la fin
+        joueur2.extend(cj1)
         cj1=[]
         cj2=[]
         
