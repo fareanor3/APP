@@ -82,13 +82,13 @@ while n<26:
 
 if len(joueur1) > len(joueur2) : 
     print("le joueur 1 a gagné")
-    print(compte1)
-    print("à : ",compte2)
+    print("score : ",compte1)
+    print("à ",compte2)
 
 elif len(joueur1) < len(joueur2) :
     print("le joueur 2 a gagné")
-    print(compte2)
-    print("à : ",compte1)
+    print("score : ",compte2)
+    print("à ",compte1)
     
 else :
     print("Egalité")
