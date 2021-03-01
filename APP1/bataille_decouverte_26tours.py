@@ -42,7 +42,6 @@ while n<26:
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
     n+=1
-    print(n)
 
     if cj1[-1][1]>cj2[-1][1]: #joueur 1 gagne
 
@@ -53,7 +52,6 @@ while n<26:
         compte1 += 1
 
         
-        print("joueur 1 gagne")
 
     elif cj1[-1][1]<cj2[-1][1]: # joueur 2 gagne
 
@@ -62,8 +60,7 @@ while n<26:
         cj1=[]
         cj2=[]
         compte2 += 1
-        
-        print("joueur 2 gagne")
+
         
     
 if len(joueur1) > len(joueur2) : 
