@@ -27,7 +27,6 @@ for i in range(0,52,2):
 for i in range(1,52,2):
     joueur2.append(jeu[i])
     
-
 ###jeu###
 random.shuffle(joueur1)
 random.shuffle(joueur2)
@@ -47,19 +46,18 @@ while n<26:
 
         joueur1.extend(cj1)   # ajoute l'elment de la liste à la fin
         joueur1.extend(cj2)
+        compte1 += len(cj1)
         cj1=[]
         cj2=[]
-        compte1 += 1
-
         
 
     elif cj1[-1][1]<cj2[-1][1]: # joueur 2 gagne
 
         joueur2.extend(cj2)   # ajoute l'elment de la liste à la fin
         joueur2.extend(cj1)
+        compte2 += len(cj2)
         cj1=[]
         cj2=[]
-        compte2 += 1
 
         
     

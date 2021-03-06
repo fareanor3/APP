@@ -56,17 +56,19 @@ while n<26:
 
         joueur1.extend(cj1)   # ajoute l'elment de la liste à la fin
         joueur1.extend(cj2)
+        compte1 += len(cj1)
         cj1 = []
         cj2 = []
-        compte1 += 1
+        
         
     elif score_a1<score_a2: # joueur 2 gagne
 
         joueur2.extend(cj2)   # ajoute l'elment de la liste
         joueur2.extend(cj1)
+        compte2 += len(cj1)
         cj1 = []
         cj2 = []
-        compte2 +=1
+        
         
 
 if len(joueur1) > len(joueur2) : 

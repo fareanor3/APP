@@ -34,26 +34,29 @@ cj1 = []
 cj2 = []
 compte1=0
 compte2=0
+n=0
 
 while len(joueur1)>0 and len(joueur2)>0:
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
+    n+=1
+    print("round : ",n)
 
     if cj1[-1][1]>cj2[-1][1]: #joueur 1 gagne
 
         joueur1.extend(cj1)   # ajoute l'elment de la liste à la fin
         joueur1.extend(cj2)
+        compte1 += len(cj1)
         cj1 = []
         cj2 = []
-        compte1 += 1
         
     elif cj1[-1][1]<cj2[-1][1]: # joueur 2 gagne
 
         joueur2.extend(cj1)   # ajoute l'elment de la liste
         joueur2.extend(cj2)
+        compte2 += len(cj2)
         cj1 = []
         cj2 = []
-        compte2 += 1
     
     else :
         cj1.append(joueur1.pop(0))
@@ -68,8 +71,3 @@ elif len(joueur1) < len(joueur2) :
     print("Le joueur 2 a gagné")
     print("score :" ,compte2)
     print("à ",compte1)
-
-else :
-    print("Egalité")
-    print("Le joueur 1 a :", joueur1)
-    print("Le joueur 2 a :", joueur2)
