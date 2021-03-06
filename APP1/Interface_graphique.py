@@ -6,49 +6,49 @@ import os
 
 def clic_1():
     fen1.destroy()
-    print("Bataille_normal")
+    print("#########Bataille_normal#########")
     import Bataille_normal
 
 
 def clic_2():
     fen1.destroy()
-    print("Bataille_normal_26tours")
+    print("#########Bataille_normal_26tours#########")
     import Bataille_normal_26tours
 
 
 def clic_3():
     fen1.destroy()
-    print("bataille_d_addition_26tours")
+    print("#########bataille_d_addition_26tours#########")
     import bataille_d_addition_26tours
 
 
 def clic_4():
     fen1.destroy()
-    print("la_bataille_d_addition")
+    print("#########la_bataille_d_addition#########")
     import la_bataille_d_addition
 
 
 def clic_5():
     fen1.destroy()
-    print("bataille_a_deux_26tours")
+    print("#########bataille_a_deux_26tours#########")
     import bataille_a_deux_26tours
 
 
 def clic_6():
     fen1.destroy()
-    print("bataille_a_deux")
+    print("#########bataille_a_deux#########")
     import bataille_a_deux
 
 
 def clic_7():
     fen1.destroy()
-    print("la_bataille_découverte")
+    print("#########la_bataille_découverte#########")
     import la_bataille_découverte 
 
 
 def clic_8():
     fen1.destroy()
-    print("bataille_decouverte_26tours")
+    print("#########bataille_decouverte_26tours#########")
     import bataille_decouverte_26tours
     
 

@@ -75,3 +75,5 @@ else :
     print("Egalité")
     print("Le joueur 1 a :", compte1,"cartes")
     print("Le joueur 2 a :", compte2,"cartes")
+
+import Interface_graphique

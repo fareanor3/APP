@@ -69,3 +69,5 @@ else :
     print("Egalité")
     print("score : " , compte2,"cartes")
     print("à ",compte1,"cartes")
+
+import Interface_graphique

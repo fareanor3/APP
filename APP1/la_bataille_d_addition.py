@@ -66,3 +66,5 @@ elif len(joueur1) < len(joueur2) :
     print("Le joueur 2 a gagné")
     print("score :" ,compte2,"cartes")
     print("à ",compte1,"cartes")
+
+import Interface_graphique
