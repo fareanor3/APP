@@ -4,10 +4,10 @@ def jeu_cartes():
 
     jeu=[]
     symbole=["Pique","Coeur","Carreau","Trefle"]
-    nombre=[(2,"Deux"),(3,"Trois"),(4,"Quatre"),(5,"Cinq"),(6,"Six"),(7,"Sept"),(8,"Huit"),(9,"Neuf"),(1,"as")]
+    nombre=[[2,"Deux"],[3,"Trois"],[4,"Quatre"],[5,"Cinq"],[6,"Six"],[7,"Sept"],[8,"Huit"],[9,"Neuf"],[1,"as"]]
     for c in symbole:
         for v in nombre:
-            jeu.append((c,)+v)
+            jeu.append([c,]+v)
     return jeu
 
 jeu=jeu_cartes()

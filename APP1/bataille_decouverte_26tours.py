@@ -3,17 +3,11 @@ import random
 def jeu_cartes():
 
     jeu=[]
-
-    couleurs=["Pique","Coeur","Carreau","Trefle"]
-
-    valeurs=[(2,"Deux"),(3,"Trois"),(4,"Quatre"),(5,"Cinq"),(6,"Six"),(7,"Sept"),(8,"Huit"),(9,"Neuf"),(10,"Dix"),(11,"Valet"),(12,"Dame"),(13,"Roi"),(14,"As")]
-
-    for c in couleurs:
-
-        for v in valeurs:
-
-            jeu.append((c,)+v)
-
+    symbole=["Pique","Coeur","Carreau","Trefle"]
+    nombre=[[2,"Deux"],[3,"Trois"],[4,"Quatre"],[5,"Cinq"],[6,"Six"],[7,"Sept"],[8,"Huit"],[9,"Neuf"],[10,"dix"],[11,"valet"],[12,"dame"],[13,"roi"],[14,"as"]]
+    for c in symbole:
+        for v in nombre:
+            jeu.append([c,]+v)
     return jeu
 
 jeu=jeu_cartes()
