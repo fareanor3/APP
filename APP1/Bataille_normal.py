@@ -32,8 +32,6 @@ compte2=0
 while len(joueur1)>0 and len(joueur2)>0:
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
-    print(len(joueur1))
-    print(len(joueur2))
 
     if cj1[-1][1]>cj2[-1][1]: #joueur 1 gagne
 
