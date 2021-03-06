@@ -56,7 +56,7 @@ while n<26:
 
         joueur1.extend(cj1)   # ajoute l'elment de la liste à la fin
         joueur1.extend(cj2)
-        compte1 += len(cj1)
+        compte1 += len(cj1)*2
         cj1 = []
         cj2 = []
         
@@ -65,7 +65,7 @@ while n<26:
 
         joueur2.extend(cj2)   # ajoute l'elment de la liste
         joueur2.extend(cj1)
-        compte2 += len(cj1)
+        compte2 += len(cj1)*2
         cj1 = []
         cj2 = []
         
@@ -73,15 +73,15 @@ while n<26:
 
 if len(joueur1) > len(joueur2) : 
     print("le joueur 1 a gagné")
-    print("score : ",compte1)
-    print("à ",compte2)
+    print("score : ",compte1,"cartes")
+    print("à ",compte2,"cartes")
 
 elif len(joueur1) < len(joueur2) :
     print("le joueur 2 a gagné")
-    print("score : ",compte2)
-    print("à ",compte1)
+    print("score : ",compte2,"cartes")
+    print("à ",compte1,"cartes")
     
 else :
     print("Egalité")
-    print("Le joueur 1 a :", compte1)
-    print("Le joueur 2 a :", compte2)
+    print("Le joueur 1 a :", compte1,"cartes")
+    print("Le joueur 2 a :", compte2,"cartes")
