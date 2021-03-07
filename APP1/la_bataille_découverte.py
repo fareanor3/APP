@@ -28,10 +28,21 @@ cj1 = []
 cj2 = []
 compte1=0
 compte2=0
+flag = False
 
 while len(joueur1)>0 and len(joueur2)>0:
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
+    if compte1 > 10000 or compte2 > 10000:
+        flag = True
+        break
+
+    if len(joueur1) == 1 :
+        flag1 = True
+        break 
+    elif len(joueur2) == 1 :
+        flag2 = True
+        break
 
     if cj1[-1][1]>cj2[-1][1]: #joueur 1 gagne
 
@@ -49,19 +60,18 @@ while len(joueur1)>0 and len(joueur2)>0:
         cj1 = []
         cj2 = []
 
-if len(joueur1) > len(joueur2) : 
-    print("Le joueur 1 a gagné")
-    print("score :" ,compte1,"cartes")
-    print("à ",compte2,"cartes")
+if len(joueur1) == len(joueur2) or flag == True : 
+    print("Egalité")
 
 elif len(joueur1) < len(joueur2) :
     print("Le joueur 2 a gagné")
     print("score :" ,compte2,"cartes")
     print("à ",compte1,"cartes")
 
-else :
-    print("Egalité")
-    print("score : " , compte2,"cartes")
+elif len(joueur1) > len(joueur2) :
+    print("Le joueur 2 a gagné")
+    print("score :" ,compte2,"cartes")
     print("à ",compte1,"cartes")
+    
 
 import Interface_graphique

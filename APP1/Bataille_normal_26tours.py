@@ -35,6 +35,13 @@ while n<26:
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
     n+=1
+
+    if len(joueur1) == 1 :
+        flag1 = True
+        break 
+    elif len(joueur2) == 1 :
+        flag2 = True
+        break
     
     if cj1[-1][1]>cj2[-1][1]: #joueur 1 gagne
 
@@ -55,7 +62,6 @@ while n<26:
     else :
         cj1.append(joueur1.pop(0))
         cj2.append(joueur2.pop(0))
-        print("time")
 
 if len(joueur1) > len(joueur2) : 
     print("Le joueur 1 a gagné") 
@@ -72,4 +78,4 @@ else :
     print("Le joueur 1 a :", compte1,"cartes")
     print("Le joueur 2 a :", compte2,"cartes")
 
-    import Interface_graphique
+import Interface_graphique

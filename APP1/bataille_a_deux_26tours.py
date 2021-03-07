@@ -29,11 +29,20 @@ cj2 = []
 n=0
 compte1=0
 compte2=0
+flag1 = False
+flag2 = False
 
 while n<26:
     
     n+=1
     
+    if len(joueur1) == 2 :
+        flag1 = True
+        break 
+    elif len(joueur2) == 2 :
+        flag2 = True
+        break
+
     cj1.append(joueur1.pop(0))
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
@@ -52,7 +61,7 @@ while n<26:
         score2 = score_b2*10 + score_a2
     
 
-    if score_a1>score_a2: #joueur 1 gagne
+    if score_a1>score_a2 : #joueur 1 gagne
 
         joueur1.extend(cj1)   # ajoute l'elment de la liste à la fin
         joueur1.extend(cj2)
@@ -70,13 +79,12 @@ while n<26:
         cj2 = []
         
         
-
-if len(joueur1) > len(joueur2) : 
+if len(joueur1) > len(joueur2) or flag2 == True : 
     print("le joueur 1 a gagné")
     print("score : ",compte1,"cartes")
     print("à ",compte2,"cartes")
 
-elif len(joueur1) < len(joueur2) :
+elif len(joueur1) < len(joueur2) or flag2 == True:
     print("le joueur 2 a gagné")
     print("score : ",compte2,"cartes")
     print("à ",compte1,"cartes")

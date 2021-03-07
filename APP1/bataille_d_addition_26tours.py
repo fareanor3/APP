@@ -34,7 +34,14 @@ compte2=0
 while n<26:
     
     n+=1
-        
+
+    if len(joueur1) == 2 :
+        flag1 = True
+        break 
+    elif len(joueur2) == 2 :
+        flag2 = True
+        break
+       
     cj1.append(joueur1.pop(0))
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
