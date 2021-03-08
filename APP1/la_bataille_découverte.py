@@ -33,16 +33,6 @@ flag = False
 while len(joueur1)>0 and len(joueur2)>0:
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
-    if compte1 > 10000 or compte2 > 10000:
-        flag = True
-        break
-
-    if len(joueur1) == 1 :
-        flag1 = True
-        break 
-    elif len(joueur2) == 1 :
-        flag2 = True
-        break
 
     if cj1[-1][1]>cj2[-1][1]: #joueur 1 gagne
 

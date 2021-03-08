@@ -33,9 +33,7 @@ compte2=0
 while len(joueur1)>0 and len(joueur2)>0:
     cj1.append(joueur1.pop(0))
     cj2.append(joueur2.pop(0))
-    if compte1 > 10000 or compte2 > 10000 :
-        flag = True 
-        break
+    print(compte1)
 
     if len(joueur1) == 1 :
         flag1 = True

@@ -36,13 +36,6 @@ while len(joueur1)>2 and len(joueur2)>2:
     cj2.append(joueur2.pop(0))
     score_a1 = cj1[-1][1] + cj1[-2][1] 
     score_a2 = cj2[-1][1] + cj2[-2][1]
-
-    if len(joueur1) == 2 :
-        flag1 = True
-        break 
-    elif len(joueur2) == 2 :
-        flag2 = True
-        break
     
 
     if score_a1>score_a2: #joueur 1 gagne
