@@ -10,11 +10,11 @@ def distance(origin, destination):
 
     dlat = math.radians(lat2-lat1)
     dlon = math.radians(lon2-lon1)
-    a = math.sin(dlat/2) **2 + math.cos(math.radians(lat1)) \
+    calcul1 = math.sin(dlat/2) **2 + math.cos(math.radians(lat1)) \
         * math.cos(math.radians(lat2)) * math.sin(dlon/2) * math.sin(dlon/2)
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-    d = radius * c
-    return d
+    calcul2 = 2 * math.atan2(math.sqrt(calcul1), math.sqrt(1-calcul1))
+    result = radius * calcul2
+    return result
 
 file = open("villes.csv", "r")
 all_gps = []
@@ -27,5 +27,6 @@ for line in lines:
 
 for gps in all_gps: # ne change pas la complexité car boucle 1 + 2 car les deux s'execute pour ttes les lignes
     coords = gps[1].split(",")
-    villes(zip(gps[0],distance(home,[float(coords[0]),float(coords[1])])))
+    print(gps[0],distance(home,[float(coords[0]),float(coords[1])]))
+    #villes(zip
 print(villes)
