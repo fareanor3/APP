@@ -28,5 +28,9 @@ for line in lines:
 for gps in all_gps: # ne change pas la complexité car boucle 1 + 2 car les deux s'execute pour ttes les lignes
     coords = gps[1].split(",")
     print(gps[0],distance(home,[float(coords[0]),float(coords[1])]))
+
+    #num_list = [1,2,3,4]
+    #name_list = ["one","two","three","four"]
+    #print ({name_list[i]:num_list[i] for i in range(len(num_list))
+
     #villes(zip
-print(villes)
