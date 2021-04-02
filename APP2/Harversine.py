@@ -1,8 +1,5 @@
 import math
 
-villes= []
-home = [48.86193629481076, 2.330573253789304]
-
 def distance(origin, destination):
     lat1, lon1 = origin
     lat2, lon2 = destination
@@ -17,29 +14,31 @@ def distance(origin, destination):
     return result
 
 file = open("villes.csv", "r")
-all_gps = []
+all_gps = {}
 lines = file.readlines()
 for line in lines:
     data = line.split(";")
-    if len (data) > 5 and data[5] != "\n":
+    if len (data) > 5 and data[5] != "\n" and data [5] != "":
         gps = data[5]
-        all_gps.append((data[1], gps))
+        all_gps[data[1]] = gps
 
-for gps in all_gps: # ne change pas la complexité car boucle 1 + 2 car les deux s'execute pour ttes les lignes
-    coords = gps[1].split(",")
-    print(gps[0],distance(home,[float(coords[0]),float(coords[1])])) # passer sous la forme d'un dico ( tuple )
-    d = {k:v for k, v in iterable}
-    #num_list = [1,2,3,4]
-    #name_list = ["one","two","three","four"]
-    #print ({name_list[i]:num_list[i] for i in range(len(num_list))
+villechosen = ""
+while villechosen not in all_gps :
+    villechosen = input("Entrez une ville : ")
 
-    #villes(zip
+Coordschosen = all_gps[villechosen].split(",")
+Coordschosen = [float(Coordschosen[0]),float(Coordschosen[1])]
+Villes=[]
+
+for Ville in all_gps: # ne change pas la complexité car boucle 1 + 2 car les deux s'execute pour ttes les lignes
+    coords = all_gps[Ville].split(",")
+    Villes.append((Ville,distance(Coordschosen,[float(coords[0]),float(coords[1])])))
 
 def fusion(liste1,liste2):
     liste=[]
     i,j=0,0
     while i<len(liste1)and j<len(liste2):
-        if liste1[i]<=liste2[j]:
+        if liste1[i][1]<=liste2[j][1]:
             liste.append(liste1[i])
             i+=1
         else:
@@ -62,5 +61,4 @@ def tri_fusion(liste):
         liste2=tri_fusion(liste[milieu:])
         return fusion(liste1,liste2)
 
-L=[3,4,6,2,5,1,8,7]
-print(tri_fusion(L))
+print(tri_fusion(Villes)[1:20])
