@@ -1,4 +1,5 @@
 import math
+import statistics as stat
 villechosen = ""
 Villes=[]
 
@@ -18,6 +19,7 @@ def distance(origin, destination):
 file = open("villes.csv", "r")
 all_gps = {}
 lines = file.readlines()
+file.close()
 for line in lines:
     data = line.split(";")
     if len (data) > 5 and data[5] != "\n" and data [5] != "":
@@ -63,4 +65,16 @@ def tri_fusion(liste):
         liste2=tri_fusion(liste[milieu:])
         return fusion(liste1,liste2)
 
-print(tri_fusion(Villes)[1:20])
+def mediane(liste):
+    lg = len(liste)
+    n = lg//2 
+    if lg%2 == 1 :		# cas effectif impair
+        return liste[n]
+    else :
+        return (liste[n-1][1]+liste[n][1])/2
+
+print("mediane : ",mediane(Villes))
+print("1er quartile : ")
+print("le min :",tri_fusion(Villes)[2])
+print("3e quartile: ")
+print("le max : ",tri_fusion(Villes)[-1])
