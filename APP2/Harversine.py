@@ -1,4 +1,6 @@
 import math
+villechosen = ""
+Villes=[]
 
 def distance(origin, destination):
     lat1, lon1 = origin
@@ -22,13 +24,13 @@ for line in lines:
         gps = data[5]
         all_gps[data[1]] = gps
 
-villechosen = ""
+
 while villechosen not in all_gps :
     villechosen = input("Entrez une ville : ")
 
 Coordschosen = all_gps[villechosen].split(",")
 Coordschosen = [float(Coordschosen[0]),float(Coordschosen[1])]
-Villes=[]
+
 
 for Ville in all_gps: # ne change pas la complexité car boucle 1 + 2 car les deux s'execute pour ttes les lignes
     coords = all_gps[Ville].split(",")
