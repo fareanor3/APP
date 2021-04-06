@@ -1,9 +1,8 @@
 import math
-import statistics as stat
 villechosen = ""
 Villes=[]
 
-def distance(origin, destination):
+def distance(origin, destination): # code de la distance
     lat1, lon1 = origin
     lat2, lon2 = destination
     radius = 6378.140 # km
@@ -24,15 +23,14 @@ for line in lines:
     data = line.split(";")
     if len (data) > 5 and data[5] != "\n" and data [5] != "":
         gps = data[5]
-        all_gps[data[1]] = gps
+        all_gps[data[1]] = gps # recuperation d'une liste de ville et coordonnée
 
 
 while villechosen not in all_gps :
-    villechosen = input("Entrez une ville : ")
+    villechosen = input("Entrez une ville : ") # demande a l'utiliateur de recuperer 
 
 Coordschosen = all_gps[villechosen].split(",")
 Coordschosen = [float(Coordschosen[0]),float(Coordschosen[1])]
-
 
 for Ville in all_gps: # ne change pas la complexité car boucle 1 + 2 car les deux s'execute pour ttes les lignes
     coords = all_gps[Ville].split(",")
@@ -68,13 +66,21 @@ def tri_fusion(liste):
 def mediane(liste):
     lg = len(liste)
     n = lg//2 
-    if lg%2 == 1 :		# cas effectif impair
-        return liste[n]
-    else :
-        return (liste[n-1][1]+liste[n][1])/2
+    return liste[n]
 
-print("mediane : ",mediane(Villes))
-print("1er quartile : ")
-print("le min :",tri_fusion(Villes)[2])
-print("3e quartile: ")
-print("le max : ",tri_fusion(Villes)[-1])
+def quartile1(liste):
+    lg = len(liste)
+    n = lg//4
+    return liste[n]
+
+def quartile3(liste):
+    lg = len(liste)
+    n = 3*(lg//4)
+    return liste[n]
+
+Villes_triees=tri_fusion(Villes)
+print("le min :          ",Villes_triees[1])
+print("1er quartile :    ",quartile1(Villes))
+print("mediane :         ",mediane(Villes))
+print("3e quartile:      ",quartile3(Villes))
+print("le max :          ",Villes_triees[-1])
