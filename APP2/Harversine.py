@@ -79,8 +79,8 @@ def quartile3(liste):
     return liste[n]
 
 Villes_triees=tri_fusion(Villes)
-print("le min :          ",Villes_triees[1])
-print("1er quartile :    ",quartile1(Villes))
-print("mediane :         ",mediane(Villes))
-print("3e quartile:      ",quartile3(Villes))
-print("le max :          ",Villes_triees[-1])
+print("le min :          ",Villes_triees[1][0],"       pour",Villes_triees[1][1],"km")
+print("1er quartile :    ",quartile1(Villes)[0],"pour",quartile1(Villes)[1],"km")
+print("mediane :         ",mediane(Villes),"km")
+print("3e quartile:      ",quartile3(Villes)[0]," pour",quartile3(Villes)[1],"km")
+print("le max :          ",Villes_triees[-1],"km")
