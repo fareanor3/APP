@@ -16,15 +16,15 @@ def distance(origin, destination): # code de la distance
     return result
 
 file = open("villes.csv", "r")
-all_gps = {}
 lines = file.readlines()
 file.close()
+all_gps = {}
+
 for line in lines:
     data = line.split(";")
     if len (data) > 5 and data[5] != "\n" and data [5] != "":
         gps = data[5]
         all_gps[data[1]] = gps # recuperation d'une liste de ville et coordonnée
-
 
 while villechosen not in all_gps :
     villechosen = input("Entrez une ville : ") # demande a l'utiliateur de recuperer 
@@ -64,23 +64,24 @@ def tri_fusion(liste):
         return fusion(liste1,liste2)
 
 def mediane(liste):
-    lg = len(liste)
+    lg = len(liste)-1
     n = lg//2 
     return liste[n]
 
 def quartile1(liste):
-    lg = len(liste)
+    lg = len(liste)-1
     n = lg//4
     return liste[n]
 
 def quartile3(liste):
-    lg = len(liste)
+    lg = len(liste)-1
     n = 3*(lg//4)
     return liste[n]
 
-Villes_triees=tri_fusion(Villes)
-print("Le Min :          ",Villes_triees[1][0]," pour : ",Villes_triees[1][1],"km")
-print("1er Quartile :    ",quartile1(Villes)[0]," pour : ",quartile1(Villes)[1]," km")
-print("Mediane :         ",mediane(Villes)[0]," pour : ",mediane(Villes)[1]," km")
-print("3e Quartile :     ",quartile3(Villes)[0]," pour : ",quartile3(Villes)[1]," km")
-print("Le Max :          ",Villes_triees[-1][0]," pour : ",Villes_triees[-1][1]," km")
+Villes_triees = tri_fusion(Villes)
+
+print("Le Min :         ",Villes_triees[1][0]," pour : ",Villes_triees[1][1],"km")
+print("1er Quartile :   ",quartile1(Villes_triees)[0]," pour : ",quartile1(Villes_triees)[1]," km")
+print("Mediane :        ",mediane(Villes_triees)[0]," pour : ",mediane(Villes_triees)[1]," km")
+print("3e Quartile :    ",quartile3(Villes_triees)[0]," pour : ",quartile3(Villes_triees)[1]," km")
+print("Le Max :         ",Villes_triees[-1][0]," pour : ",Villes_triees[-1][1]," km")
