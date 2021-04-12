@@ -36,6 +36,8 @@ for Ville in all_gps: # ne change pas la complexité car boucle 1 + 2 car les de
     coords = all_gps[Ville].split(",")
     Villes.append((Ville,distance(Coordschosen,[float(coords[0]),float(coords[1])])))
 
+ ### ALGO DE TRIE FUSION ###
+
 def fusion(liste1,liste2):
     liste=[]
     i,j=0,0
@@ -62,6 +64,8 @@ def tri_fusion(liste):
         liste1=tri_fusion(liste[:milieu])
         liste2=tri_fusion(liste[milieu:])
         return fusion(liste1,liste2)
+
+### FIN ALGO TRIE ###
 
 def mediane(liste):
     lg = len(liste)-1
