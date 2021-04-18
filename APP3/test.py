@@ -134,7 +134,7 @@ def création(Img):
     return Pixel
   
 #Appel de l'image
-Img = Image.open("lena_ng.png")
+Img = Image.open("D:\Programe\Python\APP1\APP\APP3\lena_ng.png")
 #Menu 
 print("\n\nBienvenue,\nvous allez lancer le programme de modification d'image.")
 n=int(input("veuillez choisir un programme à lancer: \n1 Tri des couleurs de l'image \n2 modifier la luminosité \n3 Augmenter le contraste \n\n Entrer ici le numéro: "))
@@ -164,15 +164,15 @@ if n==1:
     
 if n==2:
     
-    display(Img)
+    Img.show()
     # Appel de la fonction  
     img1 = lumino(Img,125)
     # Affichage des images  
-    display(img1)
+    img1.show()
     
 if n==3:
     print("\nImage originale :")
-    display(Img)
+    Img.show()
     h=triParComptage(Pixel)
     plt.hist(h, range = (0, 255), bins = 255, color = 'green', edgecolor = 'blue')
     plt.xlabel('Niveaux de gris')
@@ -187,6 +187,6 @@ if n==3:
     plt.ylabel('Effectif')
     plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
     print("\nImage contrastée :")
-    display(Img)
+    Img.show()
     print("\nHistogramme de dilatation : en bleu avant la dilatation, en rouge après la dilatation\n")
 #Fin du menu
