@@ -3,6 +3,7 @@ import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import time
 from timeit import default_timer as timer
+from IPython.display import display
 
 #Création des fonctions de tri
 def triParComptage(Tab):
@@ -83,16 +84,16 @@ def dilatation_histo(Pixel):
     imin=Pixel[0]
     imax=Pixel[-1]
     
-    (l, h) = im.size
+    (l, h) = Pixel.size
     for y in range(h):
         for x in range(l):
-            c = im.getpixel((x, y))
+            c = Pixel.getpixel((x, y))
             dilat = int(256*(c-imin)/(imax-imin))
             if c>255:
                 dilat=255
             if c<0:
                 dilat=0
-            im.putpixel((x, y), dilat)
+            Pixel.putpixel((x, y), dilat)
            
     return Pixel
 #Fonction pour changer la luminosité de l'image
