@@ -3,7 +3,7 @@ import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import time
 from timeit import default_timer as timer
-from IPython.display import display
+#########from IPython.display import display
 
 #Création des fonctions de tri
 def triParComptage(Tab):
@@ -173,7 +173,8 @@ if n==2:
 if n==3:
     print("\nImage originale :")
     Img.show()
-    h=triParComptage(Pixel)
+    I = Img.getpixel(x,y)
+    h=triParComptage(I)
     plt.hist(h, range = (0, 255), bins = 255, color = 'green', edgecolor = 'blue')
     plt.xlabel('Niveaux de gris')
     plt.ylabel('Effectif')
