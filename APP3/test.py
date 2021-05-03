@@ -96,6 +96,7 @@ def dilatation_histo(Pixel):
             Pixel.putpixel((x, y), dilat)
            
     return Pixel
+    print(dilatation_histo(Pixel))
 #Fonction pour changer la luminosité de l'image
 def lumino(img,lum):
     
@@ -160,7 +161,7 @@ if n==1:
     plt.xlabel('Niveaux de gris')
     plt.ylabel('Effectif')
     plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
-    
+
     
 if n==2:
     
@@ -173,7 +174,12 @@ if n==2:
 if n==3:
     print("\nImage originale :")
     Img.show()
-    I = Img.getpixel(x,y)
+    (x,y)=Img.size
+    I = ()
+    for i in range(x-1):
+        for j in range(y-1):
+            I(i,j) = Img.getpixel((i,j))
+    print(I)
     h=triParComptage(I)
     plt.hist(h, range = (0, 255), bins = 255, color = 'green', edgecolor = 'blue')
     plt.xlabel('Niveaux de gris')
@@ -181,7 +187,6 @@ if n==3:
     plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
     
     dilatation_histo(Img)
-    
     m=création(Img)
     plt.hist(m, range = (0, 255), bins = 255, color = 'yellow', edgecolor = 'red')
     plt.xlabel('Niveaux de gris')
