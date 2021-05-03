@@ -77,15 +77,15 @@ def tri_selection(tab):
     return tab
 #Fonction pour calculer la dilatation d'histogramme
     
-def dilatation_histo(Pixel):
+def dilatation_histo(Pixel,h):
                 
     #Tri de la liste         
-    triParComptage(Pixel)       
-    imin=Pixel[0]
-    imax=Pixel[-1]
+    #triParComptage(Pixel)       
+    imin=h[0]
+    imax=h[-1]
     
-    (l, h) = Pixel.size
-    for y in range(h):
+    l, g = Pixel.size
+    for y in range(g):
         for x in range(l):
             c = Pixel.getpixel((x, y))
             dilat = int(256*(c-imin)/(imax-imin))
@@ -104,8 +104,8 @@ def lumino(img,lum):
     h,l = img.size
     if a == '1': # le if doit être avant les deux boucles qui parcours l'image 
         # Sinon après chaque rebouclage le prog attend la valeur a de l'utilisateur  
-        for y in range(0,h-1):
-            for x in range(0,l-1):
+        for y in range(h-1):
+            for x in range(l-1):
                 c = img.getpixel((y, x))
                 c += lum
                 if c > 255:
@@ -174,19 +174,14 @@ if n==2:
 if n==3:
     print("\nImage originale :")
     Img.show()
-    (x,y)=Img.size
-    I = ()
-    for i in range(x-1):
-        for j in range(y-1):
-            I(i,j) = Img.getpixel((i,j))
-    print(I)
-    h=triParComptage(I)
+    Pixel = création(Img)
+    h=triParComptage(Pixel)
     plt.hist(h, range = (0, 255), bins = 255, color = 'green', edgecolor = 'blue')
     plt.xlabel('Niveaux de gris')
     plt.ylabel('Effectif')
     plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
     
-    dilatation_histo(Img)
+    dilatation_histo(Img,h)
     m=création(Img)
     plt.hist(m, range = (0, 255), bins = 255, color = 'yellow', edgecolor = 'red')
     plt.xlabel('Niveaux de gris')
