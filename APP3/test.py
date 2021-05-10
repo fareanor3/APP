@@ -75,15 +75,14 @@ def tri_selection(tab):
             tab[i]=tab[min]
             tab[min]=a
     return tab
+
 #Fonction pour calculer la dilatation d'histogramme
     
-def dilatation_histo(Pixel,h):
-                
+def dilatation_histo(Pixel,h):        
     #Tri de la liste         
     #triParComptage(Pixel)       
     imin=h[0]
     imax=h[-1]
-    
     l, g = Pixel.size
     for y in range(g):
         for x in range(l):
@@ -141,20 +140,22 @@ print("\n\nBienvenue,\nvous allez lancer le programme de modification d'image.")
 n=int(input("veuillez choisir un programme à lancer: \n1 Tri des couleurs de l'image \n2 modifier la luminosité \n3 Augmenter le contraste \n\n Entrer ici le numéro: "))
 if n==1:
     u=int(input("Quel algorithme de tri voulez vous utiliser ?\n\n1 Tri par comptage \n2 Tri par fusion \n3 Tri par séléction \n Entrer ici le numéro: "))
-    Pixel = création(Img)
     if u==1:
         start_time = time.time()
         h=triParComptage(Pixel)
+        print(h)
         print("Temps d execution : %s secondes ---" % (time.time() - start_time))
     if u==2:
         start_time = time.time()
         h=tri_fusion(Pixel)
+        print(h)
         print("Temps d execution : %s secondes ---" % (time.time() - start_time))
         
     if u==3:
         print(" Cela va prendre un peu de temps...")
         start_time = time.time()
         h=tri_selection(Pixel)
+        print(h)
         print("Temps d execution : %s secondes ---" % (time.time() - start_time))
         
     plt.hist(h, range = (0, 255), bins = 255, color = 'yellow', edgecolor = 'red')
