@@ -65,16 +65,17 @@ def fusion(gauche,droite):
         resultat.extend(droite[index_droite:])
     return resultat
 def tri_selection(tab):
-    for i in range (len(tab)-2):
-        min=i
-        for j in range (i+1,len(tab)):
-            if tab[j]<tab[min]:
-                min=j
-        if min!=i:
-            a=tab[i]
-            tab[i]=tab[min]
-            tab[min]=a
-    return tab
+   for i in range(len(tab)):
+      # Trouver le min
+       min = i
+       for j in range(i+1, len(tab)):
+           if tab[min] > tab[j]:
+               min = j
+                
+       tmp = tab[i]
+       tab[i] = tab[min]
+       tab[min] = tmp
+   return tab
 
 #Fonction pour calculer la dilatation d'histogramme
     
@@ -140,6 +141,7 @@ print("\n\nBienvenue,\nvous allez lancer le programme de modification d'image.")
 n=int(input("veuillez choisir un programme à lancer: \n1 Tri des couleurs de l'image \n2 modifier la luminosité \n3 Augmenter le contraste \n\n Entrer ici le numéro: "))
 if n==1:
     u=int(input("Quel algorithme de tri voulez vous utiliser ?\n\n1 Tri par comptage \n2 Tri par fusion \n3 Tri par séléction \n Entrer ici le numéro: "))
+    Pixel = création(Img)
     if u==1:
         start_time = time.time()
         h=triParComptage(Pixel)
@@ -168,7 +170,8 @@ if n==2:
     
     Img.show()
     # Appel de la fonction  
-    img1 = lumino(Img,125)
+    value = int(input("entrer un contraste entre 0 et 256: "))
+    img1 = lumino(Img,value)
     # Affichage des images  
     img1.show()
     
@@ -191,4 +194,4 @@ if n==3:
     print("\nImage contrastée :")
     Img.show()
     #print("\nHistogramme de dilatation : en bleu avant la dilatation, en rouge après la dilatation\n")
-#Fin du menu
+#Fin du menu 
