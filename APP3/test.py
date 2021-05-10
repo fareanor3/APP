@@ -164,6 +164,7 @@ if n==1:
     plt.xlabel('Niveaux de gris')
     plt.ylabel('Effectif')
     plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
+    plt.show
 
     
 if n==2:
@@ -180,18 +181,20 @@ if n==3:
     Img.show()
     Pixel = création(Img)
     h=triParComptage(Pixel)
-    #plt.hist(h, range = (0, 255), bins = 255, color = 'green', edgecolor = 'blue')
-    #plt.xlabel('Niveaux de gris')
-    #plt.ylabel('Effectif')
-    #plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
+    plt.hist(h, range = (0, 255), bins = 255, color = 'green', edgecolor = 'blue')
+    plt.xlabel('Niveaux de gris')
+    plt.ylabel('Effectif')
+    plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
+    plt.show()
     
     dilatation_histo(Img,h)
     m=création(Img)
-    #plt.hist(m, range = (0, 255), bins = 255, color = 'yellow', edgecolor = 'red')
-    #plt.xlabel('Niveaux de gris')
-    #plt.ylabel('Effectif')
-    #plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
-    print("\nImage contrastée :")
     Img.show()
-    #print("\nHistogramme de dilatation : en bleu avant la dilatation, en rouge après la dilatation\n")
+    plt.hist(m, range = (0, 255), bins = 255, color = 'yellow', edgecolor = 'red')
+    plt.xlabel('Niveaux de gris')
+    plt.ylabel('Effectif')
+    plt.title('Histogramme des différentes valeurs des pixels dans l\'image')
+    plt.show()
+    print("\nImage contrastée :")
+    print("\nHistogramme de dilatation : en bleu avant la dilatation, en rouge après la dilatation\n")
 #Fin du menu 
