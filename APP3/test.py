@@ -38,6 +38,7 @@ def tri_fusion(m):
     droite = tri_fusion(droite)
     #"créer une liste avec la fonction fusion 
     return list(fusion(gauche,droite))
+
 def fusion(gauche,droite):
     resultat = []
     #on definie la position de recherche 
@@ -64,7 +65,7 @@ def fusion(gauche,droite):
     if droite:
         resultat.extend(droite[index_droite:])
     return resultat
-    
+
 def tri_selection(tab):
    for i in range(len(tab)):
       # Trouver le min
@@ -92,12 +93,9 @@ def dilatation_histo(Pixel,h):
             dilat = int((c)*(c-imin)/(imax-imin))
             if dilat>255:
                 dilat=255
-            if dilat<0:
-                dilat=0
             Pixel.putpixel((x, y), dilat)
-           
     return Pixel
-    print(dilatation_histo(Pixel))
+
 #Fonction pour changer la luminosité de l'image
 def lumino(img,lum):
     
@@ -123,7 +121,6 @@ def lumino(img,lum):
                 else:
                     img.putpixel((y, x), c)
     return img
-
 
 #Liste contenant tous les pixels de l'image
 def création(Img): 
@@ -172,7 +169,7 @@ if n==2:
     
     Img.show()
     # Appel de la fonction  
-    value = int(input("entrer un contraste entre 0 et 256: "))
+    value = int(input("entrer un contraste entre 0 et 255: "))
     img1 = lumino(Img,value)
     # Affichage des images  
     img1.show()
