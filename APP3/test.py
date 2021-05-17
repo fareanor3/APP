@@ -64,6 +64,7 @@ def fusion(gauche,droite):
     if droite:
         resultat.extend(droite[index_droite:])
     return resultat
+    
 def tri_selection(tab):
    for i in range(len(tab)):
       # Trouver le min
@@ -88,10 +89,10 @@ def dilatation_histo(Pixel,h):
     for y in range(g):
         for x in range(l):
             c = Pixel.getpixel((x, y))
-            dilat = int(256*(c-imin)/(imax-imin))
-            if c>255:
+            dilat = int((c)*(c-imin)/(imax-imin))
+            if dilat>255:
                 dilat=255
-            if c<0:
+            if dilat<0:
                 dilat=0
             Pixel.putpixel((x, y), dilat)
            
