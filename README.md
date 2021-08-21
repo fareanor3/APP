@@ -1,4 +1,5 @@
 # APP
+![banner](https://github.com/fareanor3/APP/blob/a8bad4ee4943250da7d19ca9ceae0c9f89f75433/logo_esme.png)
 Problem-Based Learning
 
 This repository accumulates the different APP (Learning By Problems in french : "Apprentissage Par Problème") of ESME SUDRIA in SUP.
